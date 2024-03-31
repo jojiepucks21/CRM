@@ -11,24 +11,14 @@ using MySql.Data.MySqlClient;
 
 namespace CRM
 {
-    public partial class Amount_Recievable : Form
+    public partial class NewArea : Form
     {
-        public Amount_Recievable()
+        public NewArea()
         {
             InitializeComponent();
         }
 
         private void Save_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbo_Penalty_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

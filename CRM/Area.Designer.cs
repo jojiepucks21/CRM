@@ -28,75 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Save = new Button();
-            label7 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Area));
+            btn_UpdateArea = new Button();
+            btn_DeleteArea = new Button();
+            btn_AddArea = new Button();
+            dataGridView1 = new DataGridView();
             label1 = new Label();
-            textBox1 = new TextBox();
+            Area1 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // Save
+            // btn_UpdateArea
             // 
-            Save.BackColor = Color.DarkSeaGreen;
-            Save.Location = new Point(79, 152);
-            Save.Name = "Save";
-            Save.Size = new Size(115, 37);
-            Save.TabIndex = 42;
-            Save.Text = "SAVE";
-            Save.UseVisualStyleBackColor = false;
-            Save.Click += Save_Click;
+            btn_UpdateArea.BackColor = Color.DodgerBlue;
+            btn_UpdateArea.Image = (Image)resources.GetObject("btn_UpdateArea.Image");
+            btn_UpdateArea.ImageAlign = ContentAlignment.MiddleRight;
+            btn_UpdateArea.Location = new Point(29, 92);
+            btn_UpdateArea.Name = "btn_UpdateArea";
+            btn_UpdateArea.Size = new Size(72, 34);
+            btn_UpdateArea.TabIndex = 43;
+            btn_UpdateArea.Text = "UPDATE";
+            btn_UpdateArea.TextAlign = ContentAlignment.MiddleLeft;
+            btn_UpdateArea.UseVisualStyleBackColor = false;
+            btn_UpdateArea.Click += btn_UpdateArea_Click;
             // 
-            // label7
+            // btn_DeleteArea
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = SystemColors.Window;
-            label7.ImageAlign = ContentAlignment.MiddleRight;
-            label7.Location = new Point(62, 34);
-            label7.Name = "label7";
-            label7.Size = new Size(152, 37);
-            label7.TabIndex = 41;
-            label7.Text = "NEW AREA";
+            btn_DeleteArea.BackColor = Color.DodgerBlue;
+            btn_DeleteArea.Image = (Image)resources.GetObject("btn_DeleteArea.Image");
+            btn_DeleteArea.ImageAlign = ContentAlignment.MiddleRight;
+            btn_DeleteArea.Location = new Point(29, 132);
+            btn_DeleteArea.Name = "btn_DeleteArea";
+            btn_DeleteArea.Size = new Size(72, 34);
+            btn_DeleteArea.TabIndex = 42;
+            btn_DeleteArea.Text = "DELETE";
+            btn_DeleteArea.TextAlign = ContentAlignment.MiddleLeft;
+            btn_DeleteArea.UseVisualStyleBackColor = false;
+            // 
+            // btn_AddArea
+            // 
+            btn_AddArea.BackColor = Color.DodgerBlue;
+            btn_AddArea.Image = (Image)resources.GetObject("btn_AddArea.Image");
+            btn_AddArea.ImageAlign = ContentAlignment.MiddleRight;
+            btn_AddArea.Location = new Point(29, 52);
+            btn_AddArea.Name = "btn_AddArea";
+            btn_AddArea.Size = new Size(72, 34);
+            btn_AddArea.TabIndex = 41;
+            btn_AddArea.Text = "ADD";
+            btn_AddArea.TextAlign = ContentAlignment.MiddleLeft;
+            btn_AddArea.UseVisualStyleBackColor = false;
+            btn_AddArea.Click += btn_AddArea_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Area1 });
+            dataGridView1.Location = new Point(125, 52);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(146, 238);
+            dataGridView1.TabIndex = 44;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(23, 96);
+            label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(125, 16);
             label1.Name = "label1";
-            label1.Size = new Size(36, 15);
-            label1.TabIndex = 40;
-            label1.Text = "Area:";
+            label1.Size = new Size(95, 30);
+            label1.TabIndex = 45;
+            label1.Text = "Area List";
             // 
-            // textBox1
+            // Area1
             // 
-            textBox1.BackColor = Color.LemonChiffon;
-            textBox1.Location = new Point(62, 96);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(163, 23);
-            textBox1.TabIndex = 39;
+            Area1.HeaderText = "Area";
+            Area1.Name = "Area1";
+            Area1.ReadOnly = true;
             // 
             // Area
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkOrange;
-            ClientSize = new Size(265, 228);
-            Controls.Add(Save);
-            Controls.Add(label7);
+            ClientSize = new Size(290, 296);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(dataGridView1);
+            Controls.Add(btn_UpdateArea);
+            Controls.Add(btn_DeleteArea);
+            Controls.Add(btn_AddArea);
             Name = "Area";
             Text = "Area";
+            Load += Area_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button Save;
-        private Label label7;
+        private Button btn_UpdateArea;
+        private Button btn_DeleteArea;
+        private Button btn_AddArea;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Area1;
         private Label label1;
-        private TextBox textBox1;
     }
 }

@@ -18,15 +18,8 @@ namespace CRM
             InitializeComponent();
         }
 
-        private void btnAddConsumer_Click(object sender, EventArgs e)
-        {
 
-            Consumer consumer = new Consumer();
-            consumer.Show();
-            Visible = true;
-        }
-
-        private void btnArea_Click(object sender, EventArgs e)
+        private void btnAddArea_Click(object sender, EventArgs e)
         {
             Area area = new Area();
             area.Show();
@@ -39,6 +32,12 @@ namespace CRM
             amount_Recievable.Show();
             Visible = true;
 
+        }
+        private void btnAddConsumer_Click_1(object sender, EventArgs e)
+        {
+            Consumer consumer = new Consumer();
+            consumer.Show();
+            Visible = true;
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -62,6 +61,36 @@ namespace CRM
         }
 
         private void DGridView_Amount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_area_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DeleteArea_Click(object sender, EventArgs e)
+        {
+            NewArea area = new NewArea();
+            area.Show();
+            Visible = true;
+        }
+
+        private void btn_UpdateArea_Click(object sender, EventArgs e)
+        {
+            NewArea area = new NewArea();
+            area.Show();
+            Visible = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

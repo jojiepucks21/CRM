@@ -113,10 +113,12 @@
             // 
             cbo_Penalty.BackColor = Color.LemonChiffon;
             cbo_Penalty.FormattingEnabled = true;
+            cbo_Penalty.Items.AddRange(new object[] { "56.00", "33.60" });
             cbo_Penalty.Location = new Point(99, 174);
             cbo_Penalty.Name = "cbo_Penalty";
             cbo_Penalty.Size = new Size(168, 23);
             cbo_Penalty.TabIndex = 65;
+            cbo_Penalty.SelectedIndexChanged += cbo_Penalty_SelectedIndexChanged;
             // 
             // Amount_Recievable
             // 

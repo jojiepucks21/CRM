@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             Lbl_Status = new Label();
             Lbl_ConsumerName = new Label();
             Lbl_AcountNumber = new Label();
@@ -37,29 +38,32 @@
             label14 = new Label();
             btnAddAmtPen = new Button();
             btnFind = new Button();
-            btnAddConsumer = new Button();
             Lbl_MeterNumber = new Label();
             DGridView_Amount = new DataGridView();
             Column8 = new DataGridViewTextBoxColumn();
             Penalty = new DataGridViewTextBoxColumn();
             Total = new DataGridViewTextBoxColumn();
             Month = new DataGridViewTextBoxColumn();
-            Action_Amount = new DataGridViewTextBoxColumn();
             dGridView_Consumer = new DataGridView();
             AccountNo = new DataGridViewTextBoxColumn();
             MeterNo = new DataGridViewTextBoxColumn();
             Name = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
-            ACTIONS = new DataGridViewTextBoxColumn();
             label7 = new Label();
             txt_search = new TextBox();
-            btnArea = new Button();
+            btn_AddArea = new Button();
             label5 = new Label();
             cb_area = new ComboBox();
             label11 = new Label();
             label10 = new Label();
             lbl_OverAllTotal = new Label();
             panel1 = new Panel();
+            btnAddConsumer = new Button();
+            btn_SelectFile = new Button();
+            textBox1 = new TextBox();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)DGridView_Amount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dGridView_Consumer).BeginInit();
             panel1.SuspendLayout();
@@ -69,7 +73,7 @@
             // 
             Lbl_Status.AutoSize = true;
             Lbl_Status.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            Lbl_Status.Location = new Point(149, 360);
+            Lbl_Status.Location = new Point(148, 374);
             Lbl_Status.Name = "Lbl_Status";
             Lbl_Status.Size = new Size(60, 21);
             Lbl_Status.TabIndex = 62;
@@ -79,7 +83,7 @@
             // 
             Lbl_ConsumerName.AutoSize = true;
             Lbl_ConsumerName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            Lbl_ConsumerName.Location = new Point(149, 238);
+            Lbl_ConsumerName.Location = new Point(148, 252);
             Lbl_ConsumerName.Name = "Lbl_ConsumerName";
             Lbl_ConsumerName.Size = new Size(60, 21);
             Lbl_ConsumerName.TabIndex = 60;
@@ -89,7 +93,7 @@
             // 
             Lbl_AcountNumber.AutoSize = true;
             Lbl_AcountNumber.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            Lbl_AcountNumber.Location = new Point(149, 182);
+            Lbl_AcountNumber.Location = new Point(148, 196);
             Lbl_AcountNumber.Name = "Lbl_AcountNumber";
             Lbl_AcountNumber.Size = new Size(60, 21);
             Lbl_AcountNumber.TabIndex = 59;
@@ -99,7 +103,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label6.Location = new Point(104, 339);
+            label6.Location = new Point(103, 353);
             label6.Name = "label6";
             label6.Size = new Size(59, 21);
             label6.TabIndex = 58;
@@ -109,7 +113,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label12.Location = new Point(39, 276);
+            label12.Location = new Point(38, 290);
             label12.Name = "label12";
             label12.Size = new Size(124, 21);
             label12.TabIndex = 57;
@@ -119,7 +123,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label13.Location = new Point(28, 217);
+            label13.Location = new Point(27, 231);
             label13.Name = "label13";
             label13.Size = new Size(135, 21);
             label13.TabIndex = 56;
@@ -129,7 +133,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label14.Location = new Point(23, 159);
+            label14.Location = new Point(22, 173);
             label14.Name = "label14";
             label14.Size = new Size(140, 21);
             label14.TabIndex = 55;
@@ -138,9 +142,9 @@
             // btnAddAmtPen
             // 
             btnAddAmtPen.BackColor = Color.DodgerBlue;
-            btnAddAmtPen.Location = new Point(1309, 168);
+            btnAddAmtPen.Location = new Point(1358, 172);
             btnAddAmtPen.Name = "btnAddAmtPen";
-            btnAddAmtPen.Size = new Size(115, 45);
+            btnAddAmtPen.Size = new Size(104, 30);
             btnAddAmtPen.TabIndex = 54;
             btnAddAmtPen.Text = "ADD amt. pen.";
             btnAddAmtPen.UseVisualStyleBackColor = false;
@@ -149,30 +153,19 @@
             // btnFind
             // 
             btnFind.BackColor = Color.DodgerBlue;
-            btnFind.Location = new Point(767, 171);
+            btnFind.Location = new Point(747, 176);
             btnFind.Name = "btnFind";
-            btnFind.Size = new Size(83, 39);
+            btnFind.Size = new Size(70, 27);
             btnFind.TabIndex = 53;
-            btnFind.Text = "Find";
+            btnFind.Text = "FIND";
             btnFind.UseVisualStyleBackColor = false;
             btnFind.Click += btnFind_Click;
-            // 
-            // btnAddConsumer
-            // 
-            btnAddConsumer.BackColor = Color.DodgerBlue;
-            btnAddConsumer.Location = new Point(104, 438);
-            btnAddConsumer.Name = "btnAddConsumer";
-            btnAddConsumer.Size = new Size(160, 66);
-            btnAddConsumer.TabIndex = 52;
-            btnAddConsumer.Text = "ADD CONSUMER";
-            btnAddConsumer.UseVisualStyleBackColor = false;
-            btnAddConsumer.Click += btnAddConsumer_Click;
             // 
             // Lbl_MeterNumber
             // 
             Lbl_MeterNumber.AutoSize = true;
             Lbl_MeterNumber.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            Lbl_MeterNumber.Location = new Point(149, 297);
+            Lbl_MeterNumber.Location = new Point(148, 311);
             Lbl_MeterNumber.Name = "Lbl_MeterNumber";
             Lbl_MeterNumber.Size = new Size(60, 21);
             Lbl_MeterNumber.TabIndex = 61;
@@ -183,11 +176,11 @@
             DGridView_Amount.AllowUserToAddRows = false;
             DGridView_Amount.AllowUserToDeleteRows = false;
             DGridView_Amount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGridView_Amount.Columns.AddRange(new DataGridViewColumn[] { Column8, Penalty, Total, Month, Action_Amount });
+            DGridView_Amount.Columns.AddRange(new DataGridViewColumn[] { Column8, Penalty, Total, Month });
             DGridView_Amount.Location = new Point(1019, 217);
             DGridView_Amount.Name = "DGridView_Amount";
             DGridView_Amount.ReadOnly = true;
-            DGridView_Amount.Size = new Size(416, 427);
+            DGridView_Amount.Size = new Size(443, 511);
             DGridView_Amount.TabIndex = 51;
             DGridView_Amount.CellContentClick += DGridView_Amount_CellContentClick;
             // 
@@ -215,28 +208,22 @@
             Month.Name = "Month";
             Month.ReadOnly = true;
             // 
-            // Action_Amount
-            // 
-            Action_Amount.HeaderText = "ACTIONS";
-            Action_Amount.Name = "Action_Amount";
-            Action_Amount.ReadOnly = true;
-            // 
             // dGridView_Consumer
             // 
             dGridView_Consumer.AllowUserToAddRows = false;
             dGridView_Consumer.AllowUserToDeleteRows = false;
             dGridView_Consumer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGridView_Consumer.Columns.AddRange(new DataGridViewColumn[] { AccountNo, MeterNo, Name, Status, ACTIONS });
+            dGridView_Consumer.Columns.AddRange(new DataGridViewColumn[] { AccountNo, MeterNo, Name, Status });
             dGridView_Consumer.Location = new Point(373, 217);
             dGridView_Consumer.Name = "dGridView_Consumer";
             dGridView_Consumer.ReadOnly = true;
-            dGridView_Consumer.Size = new Size(640, 427);
+            dGridView_Consumer.Size = new Size(640, 511);
             dGridView_Consumer.TabIndex = 50;
             dGridView_Consumer.CellContentClick += dGridView_Consumer_CellContentClick;
             // 
             // AccountNo
             // 
-            AccountNo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            AccountNo.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             AccountNo.HeaderText = "ACCT NO.";
             AccountNo.Name = "AccountNo";
             AccountNo.ReadOnly = true;
@@ -249,6 +236,7 @@
             // 
             // Name
             // 
+            Name.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Name.HeaderText = "NAME";
             Name.Name = "Name";
             Name.ReadOnly = true;
@@ -258,12 +246,6 @@
             Status.HeaderText = "STATUS";
             Status.Name = "Status";
             Status.ReadOnly = true;
-            // 
-            // ACTIONS
-            // 
-            ACTIONS.HeaderText = "ACTIONS";
-            ACTIONS.Name = "ACTIONS";
-            ACTIONS.ReadOnly = true;
             // 
             // label7
             // 
@@ -277,48 +259,50 @@
             // txt_search
             // 
             txt_search.BackColor = Color.LemonChiffon;
-            txt_search.Location = new Point(525, 179);
+            txt_search.Location = new Point(505, 179);
             txt_search.Name = "txt_search";
             txt_search.Size = new Size(236, 23);
             txt_search.TabIndex = 48;
             // 
-            // btnArea
+            // btn_AddArea
             // 
-            btnArea.BackColor = Color.DodgerBlue;
-            btnArea.Location = new Point(375, 71);
-            btnArea.Name = "btnArea";
-            btnArea.Size = new Size(115, 45);
-            btnArea.TabIndex = 38;
-            btnArea.Text = "ADD AREA";
-            btnArea.UseVisualStyleBackColor = false;
-            btnArea.Click += btnArea_Click;
+            btn_AddArea.BackColor = Color.DodgerBlue;
+            btn_AddArea.Location = new Point(38, 101);
+            btn_AddArea.Name = "btn_AddArea";
+            btn_AddArea.Size = new Size(112, 34);
+            btn_AddArea.TabIndex = 38;
+            btn_AddArea.Text = "AREA";
+            btn_AddArea.UseVisualStyleBackColor = false;
+            btn_AddArea.Click += btnAddArea_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.WhiteSmoke;
-            label5.Location = new Point(35, 83);
+            label5.Location = new Point(175, 109);
             label5.Name = "label5";
-            label5.Size = new Size(110, 21);
+            label5.Size = new Size(133, 21);
             label5.TabIndex = 29;
-            label5.Text = "SELECT AREA:";
+            label5.Text = "SELECT BY AREA:";
+            label5.Click += label5_Click;
             // 
             // cb_area
             // 
             cb_area.BackColor = Color.LemonChiffon;
             cb_area.FormattingEnabled = true;
-            cb_area.Location = new Point(149, 83);
+            cb_area.Location = new Point(310, 110);
             cb_area.Name = "cb_area";
             cb_area.Size = new Size(146, 23);
             cb_area.TabIndex = 28;
+            cb_area.SelectedIndexChanged += cb_area_SelectedIndexChanged;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.WhiteSmoke;
-            label11.Location = new Point(48, 9);
+            label11.Location = new Point(38, 9);
             label11.Name = "label11";
             label11.Size = new Size(486, 32);
             label11.TabIndex = 2;
@@ -329,7 +313,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.WhiteSmoke;
-            label10.Location = new Point(1070, 63);
+            label10.Location = new Point(1078, 101);
             label10.Name = "label10";
             label10.Size = new Size(203, 32);
             label10.TabIndex = 1;
@@ -340,7 +324,7 @@
             lbl_OverAllTotal.AutoSize = true;
             lbl_OverAllTotal.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_OverAllTotal.ForeColor = Color.Red;
-            lbl_OverAllTotal.Location = new Point(1265, 58);
+            lbl_OverAllTotal.Location = new Point(1273, 96);
             lbl_OverAllTotal.Name = "lbl_OverAllTotal";
             lbl_OverAllTotal.Size = new Size(159, 37);
             lbl_OverAllTotal.TabIndex = 0;
@@ -349,24 +333,98 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkOrange;
-            panel1.Controls.Add(btnArea);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(cb_area);
+            panel1.Controls.Add(btn_AddArea);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(lbl_OverAllTotal);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1457, 116);
+            panel1.Size = new Size(1493, 156);
             panel1.TabIndex = 47;
             panel1.Paint += panel1_Paint;
+            // 
+            // btnAddConsumer
+            // 
+            btnAddConsumer.BackColor = Color.DodgerBlue;
+            btnAddConsumer.Image = (Image)resources.GetObject("btnAddConsumer.Image");
+            btnAddConsumer.ImageAlign = ContentAlignment.MiddleRight;
+            btnAddConsumer.Location = new Point(21, 426);
+            btnAddConsumer.Name = "btnAddConsumer";
+            btnAddConsumer.Size = new Size(141, 45);
+            btnAddConsumer.TabIndex = 66;
+            btnAddConsumer.Text = "ADD CONSUMER";
+            btnAddConsumer.TextAlign = ContentAlignment.MiddleLeft;
+            btnAddConsumer.UseVisualStyleBackColor = false;
+            btnAddConsumer.Click += btnAddConsumer_Click_1;
+            // 
+            // btn_SelectFile
+            // 
+            btn_SelectFile.BackColor = Color.DodgerBlue;
+            btn_SelectFile.Location = new Point(22, 576);
+            btn_SelectFile.Name = "btn_SelectFile";
+            btn_SelectFile.Size = new Size(87, 34);
+            btn_SelectFile.TabIndex = 63;
+            btn_SelectFile.Text = "IMPORT FILE";
+            btn_SelectFile.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.LemonChiffon;
+            textBox1.Location = new Point(115, 583);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(180, 23);
+            textBox1.TabIndex = 64;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.DodgerBlue;
+            button3.Location = new Point(22, 625);
+            button3.Name = "button3";
+            button3.Size = new Size(87, 34);
+            button3.TabIndex = 67;
+            button3.Text = "SAVE FILE";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.DodgerBlue;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.MiddleRight;
+            button4.Location = new Point(175, 426);
+            button4.Name = "button4";
+            button4.Size = new Size(151, 45);
+            button4.TabIndex = 68;
+            button4.Text = "UPDATE CONSUMER";
+            button4.TextAlign = ContentAlignment.MiddleLeft;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.DodgerBlue;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleRight;
+            button5.Location = new Point(175, 486);
+            button5.Name = "button5";
+            button5.Size = new Size(151, 45);
+            button5.TabIndex = 69;
+            button5.Text = "DELETE CONSUMER";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1457, 655);
+            ClientSize = new Size(1493, 760);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(btnAddConsumer);
+            Controls.Add(textBox1);
+            Controls.Add(btn_SelectFile);
             Controls.Add(Lbl_Status);
             Controls.Add(Lbl_ConsumerName);
             Controls.Add(Lbl_AcountNumber);
@@ -376,14 +434,13 @@
             Controls.Add(label14);
             Controls.Add(btnAddAmtPen);
             Controls.Add(btnFind);
-            Controls.Add(btnAddConsumer);
             Controls.Add(Lbl_MeterNumber);
             Controls.Add(DGridView_Amount);
             Controls.Add(dGridView_Consumer);
             Controls.Add(label7);
             Controls.Add(txt_search);
             Controls.Add(panel1);
-            
+            Name = "Dashboard";
             Text = "Dashboard";
             Load += Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)DGridView_Amount).EndInit();
@@ -405,28 +462,31 @@
         private Label label14;
         private Button btnAddAmtPen;
         private Button btnFind;
-        private Button btnAddConsumer;
         private Label Lbl_MeterNumber;
         private DataGridView DGridView_Amount;
         private DataGridView dGridView_Consumer;
         private Label label7;
         private TextBox txt_search;
-        private Button btnArea;
+        private Button btn_AddArea;
         private Label label5;
         private ComboBox cb_area;
         private Label label11;
         private Label label10;
         private Label lbl_OverAllTotal;
         private Panel panel1;
-        private DataGridViewTextBoxColumn AccountNo;
-        private DataGridViewTextBoxColumn MeterNo;
-        private DataGridViewTextBoxColumn Name;
-        private DataGridViewTextBoxColumn Status;
-        private DataGridViewTextBoxColumn ACTIONS;
+        private Button btn_SelectFile;
+        private TextBox textBox1;
+        private Button btnAddConsumer;
+        private Button button3;
+        private Button button4;
+        private Button button5;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Penalty;
         private DataGridViewTextBoxColumn Total;
         private DataGridViewTextBoxColumn Month;
-        private DataGridViewTextBoxColumn Action_Amount;
+        private DataGridViewTextBoxColumn AccountNo;
+        private DataGridViewTextBoxColumn MeterNo;
+        private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn Status;
     }
 }

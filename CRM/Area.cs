@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace CRM
 {
@@ -18,7 +17,17 @@ namespace CRM
             InitializeComponent();
         }
 
-        private void Save_Click(object sender, EventArgs e)
+        private void Area_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_AddArea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_UpdateArea_Click(object sender, EventArgs e)
         {
 
         }
