@@ -432,6 +432,7 @@
             btn_DeleteRecievable.Text = "DELETE";
             btn_DeleteRecievable.TextAlign = ContentAlignment.MiddleLeft;
             btn_DeleteRecievable.UseVisualStyleBackColor = false;
+            btn_DeleteRecievable.Click += btn_DeleteRecievable_Click;
             // 
             // btn_UpdateRecievable
             // 
@@ -445,6 +446,7 @@
             btn_UpdateRecievable.Text = "UPDATE";
             btn_UpdateRecievable.TextAlign = ContentAlignment.MiddleLeft;
             btn_UpdateRecievable.UseVisualStyleBackColor = false;
+            btn_UpdateRecievable.Click += btn_UpdateRecievable_Click;
             // 
             // Dashboard
             // 
@@ -474,7 +476,6 @@
             Controls.Add(label7);
             Controls.Add(txt_search);
             Controls.Add(panel1);
-            Name = "Dashboard";
             Text = "Dashboard";
             Load += Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)DGridView_Amount).EndInit();

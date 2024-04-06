@@ -99,5 +99,19 @@ namespace CRM
         {
 
         }
+
+        private void btn_UpdateRecievable_Click(object sender, EventArgs e)
+        {
+            Amount_Recievable amount_Recievable = new Amount_Recievable();
+            amount_Recievable.Show();
+            Visible = true;
+        }
+
+        private void btn_DeleteRecievable_Click(object sender, EventArgs e)
+        {
+            Amount_Recievable amount_Recievable = new Amount_Recievable();
+            amount_Recievable.Show();
+            Visible = true;
+        }
     }
 }
