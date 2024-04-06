@@ -36,7 +36,7 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
-            btnAddAmtPen = new Button();
+            btn_AddAmtPen = new Button();
             btnFind = new Button();
             Lbl_MeterNumber = new Label();
             DGridView_Amount = new DataGridView();
@@ -51,7 +51,7 @@
             Status = new DataGridViewTextBoxColumn();
             label7 = new Label();
             txt_search = new TextBox();
-            btn_AddArea = new Button();
+            btn_Areas = new Button();
             label5 = new Label();
             cb_area = new ComboBox();
             label11 = new Label();
@@ -61,9 +61,11 @@
             btnAddConsumer = new Button();
             btn_SelectFile = new Button();
             textBox1 = new TextBox();
-            button3 = new Button();
+            btn_Export = new Button();
             button4 = new Button();
             button5 = new Button();
+            btn_DeleteRecievable = new Button();
+            btn_UpdateRecievable = new Button();
             ((System.ComponentModel.ISupportInitialize)DGridView_Amount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dGridView_Consumer).BeginInit();
             panel1.SuspendLayout();
@@ -139,16 +141,19 @@
             label14.TabIndex = 55;
             label14.Text = "Account Number:";
             // 
-            // btnAddAmtPen
+            // btn_AddAmtPen
             // 
-            btnAddAmtPen.BackColor = Color.DodgerBlue;
-            btnAddAmtPen.Location = new Point(1358, 172);
-            btnAddAmtPen.Name = "btnAddAmtPen";
-            btnAddAmtPen.Size = new Size(104, 30);
-            btnAddAmtPen.TabIndex = 54;
-            btnAddAmtPen.Text = "ADD amt. pen.";
-            btnAddAmtPen.UseVisualStyleBackColor = false;
-            btnAddAmtPen.Click += btnAddAmtPen_Click;
+            btn_AddAmtPen.BackColor = Color.DarkTurquoise;
+            btn_AddAmtPen.Image = (Image)resources.GetObject("btn_AddAmtPen.Image");
+            btn_AddAmtPen.ImageAlign = ContentAlignment.MiddleRight;
+            btn_AddAmtPen.Location = new Point(1484, 217);
+            btn_AddAmtPen.Name = "btn_AddAmtPen";
+            btn_AddAmtPen.Size = new Size(119, 45);
+            btn_AddAmtPen.TabIndex = 54;
+            btn_AddAmtPen.Text = "ADD AMT. PEN.";
+            btn_AddAmtPen.TextAlign = ContentAlignment.MiddleLeft;
+            btn_AddAmtPen.UseVisualStyleBackColor = false;
+            btn_AddAmtPen.Click += btn_AddAmtPen_Click;
             // 
             // btnFind
             // 
@@ -264,16 +269,16 @@
             txt_search.Size = new Size(236, 23);
             txt_search.TabIndex = 48;
             // 
-            // btn_AddArea
+            // btn_Areas
             // 
-            btn_AddArea.BackColor = Color.DodgerBlue;
-            btn_AddArea.Location = new Point(38, 101);
-            btn_AddArea.Name = "btn_AddArea";
-            btn_AddArea.Size = new Size(112, 34);
-            btn_AddArea.TabIndex = 38;
-            btn_AddArea.Text = "AREA";
-            btn_AddArea.UseVisualStyleBackColor = false;
-            btn_AddArea.Click += btnAddArea_Click;
+            btn_Areas.BackColor = Color.DodgerBlue;
+            btn_Areas.Location = new Point(38, 101);
+            btn_Areas.Name = "btn_Areas";
+            btn_Areas.Size = new Size(112, 34);
+            btn_Areas.TabIndex = 38;
+            btn_Areas.Text = "AREA";
+            btn_Areas.UseVisualStyleBackColor = false;
+            btn_Areas.Click += btn_Areas_Click;
             // 
             // label5
             // 
@@ -335,14 +340,14 @@
             panel1.BackColor = Color.DarkOrange;
             panel1.Controls.Add(label5);
             panel1.Controls.Add(cb_area);
-            panel1.Controls.Add(btn_AddArea);
+            panel1.Controls.Add(btn_Areas);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(lbl_OverAllTotal);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1493, 156);
+            panel1.Size = new Size(1633, 156);
             panel1.TabIndex = 47;
             panel1.Paint += panel1_Paint;
             // 
@@ -351,9 +356,9 @@
             btnAddConsumer.BackColor = Color.DodgerBlue;
             btnAddConsumer.Image = (Image)resources.GetObject("btnAddConsumer.Image");
             btnAddConsumer.ImageAlign = ContentAlignment.MiddleRight;
-            btnAddConsumer.Location = new Point(21, 426);
+            btnAddConsumer.Location = new Point(243, 580);
             btnAddConsumer.Name = "btnAddConsumer";
-            btnAddConsumer.Size = new Size(141, 45);
+            btnAddConsumer.Size = new Size(105, 45);
             btnAddConsumer.TabIndex = 66;
             btnAddConsumer.Text = "ADD CONSUMER";
             btnAddConsumer.TextAlign = ContentAlignment.MiddleLeft;
@@ -363,7 +368,7 @@
             // btn_SelectFile
             // 
             btn_SelectFile.BackColor = Color.DodgerBlue;
-            btn_SelectFile.Location = new Point(22, 576);
+            btn_SelectFile.Location = new Point(35, 460);
             btn_SelectFile.Name = "btn_SelectFile";
             btn_SelectFile.Size = new Size(87, 34);
             btn_SelectFile.TabIndex = 63;
@@ -373,29 +378,30 @@
             // textBox1
             // 
             textBox1.BackColor = Color.LemonChiffon;
-            textBox1.Location = new Point(115, 583);
+            textBox1.Location = new Point(128, 467);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(180, 23);
             textBox1.TabIndex = 64;
             // 
-            // button3
+            // btn_Export
             // 
-            button3.BackColor = Color.DodgerBlue;
-            button3.Location = new Point(22, 625);
-            button3.Name = "button3";
-            button3.Size = new Size(87, 34);
-            button3.TabIndex = 67;
-            button3.Text = "SAVE FILE";
-            button3.UseVisualStyleBackColor = false;
+            btn_Export.BackColor = Color.DodgerBlue;
+            btn_Export.Location = new Point(35, 509);
+            btn_Export.Name = "btn_Export";
+            btn_Export.Size = new Size(87, 34);
+            btn_Export.TabIndex = 67;
+            btn_Export.Text = "EXPORT FILE";
+            btn_Export.UseVisualStyleBackColor = false;
+            btn_Export.Click += button3_Click;
             // 
             // button4
             // 
             button4.BackColor = Color.DodgerBlue;
             button4.Image = (Image)resources.GetObject("button4.Image");
             button4.ImageAlign = ContentAlignment.MiddleRight;
-            button4.Location = new Point(175, 426);
+            button4.Location = new Point(243, 633);
             button4.Name = "button4";
-            button4.Size = new Size(151, 45);
+            button4.Size = new Size(105, 45);
             button4.TabIndex = 68;
             button4.Text = "UPDATE CONSUMER";
             button4.TextAlign = ContentAlignment.MiddleLeft;
@@ -406,22 +412,50 @@
             button5.BackColor = Color.DodgerBlue;
             button5.Image = (Image)resources.GetObject("button5.Image");
             button5.ImageAlign = ContentAlignment.MiddleRight;
-            button5.Location = new Point(175, 486);
+            button5.Location = new Point(243, 684);
             button5.Name = "button5";
-            button5.Size = new Size(151, 45);
+            button5.Size = new Size(105, 45);
             button5.TabIndex = 69;
             button5.Text = "DELETE CONSUMER";
             button5.TextAlign = ContentAlignment.MiddleLeft;
             button5.UseVisualStyleBackColor = false;
             // 
+            // btn_DeleteRecievable
+            // 
+            btn_DeleteRecievable.BackColor = Color.DarkTurquoise;
+            btn_DeleteRecievable.Image = (Image)resources.GetObject("btn_DeleteRecievable.Image");
+            btn_DeleteRecievable.ImageAlign = ContentAlignment.MiddleRight;
+            btn_DeleteRecievable.Location = new Point(1484, 319);
+            btn_DeleteRecievable.Name = "btn_DeleteRecievable";
+            btn_DeleteRecievable.Size = new Size(119, 45);
+            btn_DeleteRecievable.TabIndex = 70;
+            btn_DeleteRecievable.Text = "DELETE";
+            btn_DeleteRecievable.TextAlign = ContentAlignment.MiddleLeft;
+            btn_DeleteRecievable.UseVisualStyleBackColor = false;
+            // 
+            // btn_UpdateRecievable
+            // 
+            btn_UpdateRecievable.BackColor = Color.DarkTurquoise;
+            btn_UpdateRecievable.Image = (Image)resources.GetObject("btn_UpdateRecievable.Image");
+            btn_UpdateRecievable.ImageAlign = ContentAlignment.MiddleRight;
+            btn_UpdateRecievable.Location = new Point(1484, 268);
+            btn_UpdateRecievable.Name = "btn_UpdateRecievable";
+            btn_UpdateRecievable.Size = new Size(119, 45);
+            btn_UpdateRecievable.TabIndex = 71;
+            btn_UpdateRecievable.Text = "UPDATE";
+            btn_UpdateRecievable.TextAlign = ContentAlignment.MiddleLeft;
+            btn_UpdateRecievable.UseVisualStyleBackColor = false;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1493, 760);
+            ClientSize = new Size(1633, 760);
+            Controls.Add(btn_UpdateRecievable);
+            Controls.Add(btn_DeleteRecievable);
             Controls.Add(button5);
             Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(btn_Export);
             Controls.Add(btnAddConsumer);
             Controls.Add(textBox1);
             Controls.Add(btn_SelectFile);
@@ -432,7 +466,7 @@
             Controls.Add(label12);
             Controls.Add(label13);
             Controls.Add(label14);
-            Controls.Add(btnAddAmtPen);
+            Controls.Add(btn_AddAmtPen);
             Controls.Add(btnFind);
             Controls.Add(Lbl_MeterNumber);
             Controls.Add(DGridView_Amount);
@@ -460,14 +494,14 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private Button btnAddAmtPen;
+        private Button btn_AddAmtPen;
         private Button btnFind;
         private Label Lbl_MeterNumber;
         private DataGridView DGridView_Amount;
         private DataGridView dGridView_Consumer;
         private Label label7;
         private TextBox txt_search;
-        private Button btn_AddArea;
+        private Button btn_Areas;
         private Label label5;
         private ComboBox cb_area;
         private Label label11;
@@ -477,7 +511,7 @@
         private Button btn_SelectFile;
         private TextBox textBox1;
         private Button btnAddConsumer;
-        private Button button3;
+        private Button btn_Export;
         private Button button4;
         private Button button5;
         private DataGridViewTextBoxColumn Column8;
@@ -488,5 +522,7 @@
         private DataGridViewTextBoxColumn MeterNo;
         private DataGridViewTextBoxColumn Name;
         private DataGridViewTextBoxColumn Status;
+        private Button btn_DeleteRecievable;
+        private Button btn_UpdateRecievable;
     }
 }

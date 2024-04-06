@@ -19,14 +19,14 @@ namespace CRM
         }
 
 
-        private void btnAddArea_Click(object sender, EventArgs e)
+        private void btn_Areas_Click(object sender, EventArgs e)
         {
             Area area = new Area();
             area.Show();
             Visible = true;
         }
 
-        private void btnAddAmtPen_Click(object sender, EventArgs e)
+        private void btn_AddAmtPen_Click(object sender, EventArgs e)
         {
             Amount_Recievable amount_Recievable = new Amount_Recievable();
             amount_Recievable.Show();
@@ -91,6 +91,11 @@ namespace CRM
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
