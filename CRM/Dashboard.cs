@@ -111,7 +111,7 @@ namespace CRM
             Visible = true;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txt_FileImport_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -60,7 +60,7 @@
             panel1 = new Panel();
             btnAddConsumer = new Button();
             btn_SelectFile = new Button();
-            textBox1 = new TextBox();
+            txt_FileImport = new TextBox();
             btn_Export = new Button();
             button4 = new Button();
             button5 = new Button();
@@ -353,7 +353,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1879, 156);
+            panel1.Size = new Size(1758, 156);
             panel1.TabIndex = 47;
             panel1.Paint += panel1_Paint;
             // 
@@ -381,14 +381,14 @@
             btn_SelectFile.Text = "IMPORT FILE";
             btn_SelectFile.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txt_FileImport
             // 
-            textBox1.BackColor = Color.LemonChiffon;
-            textBox1.Location = new Point(128, 467);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(180, 23);
-            textBox1.TabIndex = 64;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txt_FileImport.BackColor = Color.LemonChiffon;
+            txt_FileImport.Location = new Point(128, 467);
+            txt_FileImport.Name = "txt_FileImport";
+            txt_FileImport.Size = new Size(180, 23);
+            txt_FileImport.TabIndex = 64;
+            txt_FileImport.TextChanged += txt_FileImport_TextChanged;
             // 
             // btn_Export
             // 
@@ -515,7 +515,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1879, 760);
+            ClientSize = new Size(1758, 778);
             Controls.Add(cb_Penalty);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -528,7 +528,7 @@
             Controls.Add(button4);
             Controls.Add(btn_Export);
             Controls.Add(btnAddConsumer);
-            Controls.Add(textBox1);
+            Controls.Add(txt_FileImport);
             Controls.Add(btn_SelectFile);
             Controls.Add(Lbl_Status);
             Controls.Add(Lbl_ConsumerName);
@@ -545,7 +545,6 @@
             Controls.Add(label7);
             Controls.Add(txt_search);
             Controls.Add(panel1);
-            Name = "Dashboard";
             Text = "Dashboard";
             Load += Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)DGridView_Amount).EndInit();
@@ -580,7 +579,7 @@
         private Label lbl_OverAllTotal;
         private Panel panel1;
         private Button btn_SelectFile;
-        private TextBox textBox1;
+        private TextBox txt_FileImport;
         private Button btnAddConsumer;
         private Button btn_Export;
         private Button button4;
