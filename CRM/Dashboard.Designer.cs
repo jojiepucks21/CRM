@@ -66,6 +66,12 @@
             button5 = new Button();
             btn_DeleteRecievable = new Button();
             btn_UpdateRecievable = new Button();
+            txt_Month = new TextBox();
+            txt_Amount = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            cb_Penalty = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)DGridView_Amount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dGridView_Consumer).BeginInit();
             panel1.SuspendLayout();
@@ -146,7 +152,7 @@
             btn_AddAmtPen.BackColor = Color.DarkTurquoise;
             btn_AddAmtPen.Image = (Image)resources.GetObject("btn_AddAmtPen.Image");
             btn_AddAmtPen.ImageAlign = ContentAlignment.MiddleRight;
-            btn_AddAmtPen.Location = new Point(1484, 217);
+            btn_AddAmtPen.Location = new Point(1490, 343);
             btn_AddAmtPen.Name = "btn_AddAmtPen";
             btn_AddAmtPen.Size = new Size(119, 45);
             btn_AddAmtPen.TabIndex = 54;
@@ -347,7 +353,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1633, 156);
+            panel1.Size = new Size(1879, 156);
             panel1.TabIndex = 47;
             panel1.Paint += panel1_Paint;
             // 
@@ -382,6 +388,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(180, 23);
             textBox1.TabIndex = 64;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // btn_Export
             // 
@@ -425,7 +432,7 @@
             btn_DeleteRecievable.BackColor = Color.DarkTurquoise;
             btn_DeleteRecievable.Image = (Image)resources.GetObject("btn_DeleteRecievable.Image");
             btn_DeleteRecievable.ImageAlign = ContentAlignment.MiddleRight;
-            btn_DeleteRecievable.Location = new Point(1484, 319);
+            btn_DeleteRecievable.Location = new Point(1490, 485);
             btn_DeleteRecievable.Name = "btn_DeleteRecievable";
             btn_DeleteRecievable.Size = new Size(119, 45);
             btn_DeleteRecievable.TabIndex = 70;
@@ -439,7 +446,7 @@
             btn_UpdateRecievable.BackColor = Color.DarkTurquoise;
             btn_UpdateRecievable.Image = (Image)resources.GetObject("btn_UpdateRecievable.Image");
             btn_UpdateRecievable.ImageAlign = ContentAlignment.MiddleRight;
-            btn_UpdateRecievable.Location = new Point(1484, 268);
+            btn_UpdateRecievable.Location = new Point(1490, 434);
             btn_UpdateRecievable.Name = "btn_UpdateRecievable";
             btn_UpdateRecievable.Size = new Size(119, 45);
             btn_UpdateRecievable.TabIndex = 71;
@@ -448,11 +455,73 @@
             btn_UpdateRecievable.UseVisualStyleBackColor = false;
             btn_UpdateRecievable.Click += btn_UpdateRecievable_Click;
             // 
+            // txt_Month
+            // 
+            txt_Month.BackColor = Color.LemonChiffon;
+            txt_Month.Location = new Point(1565, 301);
+            txt_Month.Name = "txt_Month";
+            txt_Month.Size = new Size(146, 23);
+            txt_Month.TabIndex = 72;
+            // 
+            // txt_Amount
+            // 
+            txt_Amount.BackColor = Color.LemonChiffon;
+            txt_Amount.Location = new Point(1565, 233);
+            txt_Amount.Name = "txt_Amount";
+            txt_Amount.Size = new Size(180, 23);
+            txt_Amount.TabIndex = 74;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label1.Location = new Point(1480, 233);
+            label1.Name = "label1";
+            label1.Size = new Size(84, 21);
+            label1.TabIndex = 75;
+            label1.Text = "AMOUNT:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label2.Location = new Point(1490, 304);
+            label2.Name = "label2";
+            label2.Size = new Size(74, 21);
+            label2.TabIndex = 76;
+            label2.Text = "MONTH:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label3.Location = new Point(1484, 266);
+            label3.Name = "label3";
+            label3.Size = new Size(79, 21);
+            label3.TabIndex = 77;
+            label3.Text = "PENALTY:";
+            // 
+            // cb_Penalty
+            // 
+            cb_Penalty.BackColor = Color.LemonChiffon;
+            cb_Penalty.FormattingEnabled = true;
+            cb_Penalty.Items.AddRange(new object[] { "33.60", "56.00" });
+            cb_Penalty.Location = new Point(1565, 268);
+            cb_Penalty.Name = "cb_Penalty";
+            cb_Penalty.Size = new Size(146, 23);
+            cb_Penalty.TabIndex = 39;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1633, 760);
+            ClientSize = new Size(1879, 760);
+            Controls.Add(cb_Penalty);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txt_Amount);
+            Controls.Add(txt_Month);
             Controls.Add(btn_UpdateRecievable);
             Controls.Add(btn_DeleteRecievable);
             Controls.Add(button5);
@@ -476,6 +545,7 @@
             Controls.Add(label7);
             Controls.Add(txt_search);
             Controls.Add(panel1);
+            Name = "Dashboard";
             Text = "Dashboard";
             Load += Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)DGridView_Amount).EndInit();
@@ -525,5 +595,11 @@
         private DataGridViewTextBoxColumn Status;
         private Button btn_DeleteRecievable;
         private Button btn_UpdateRecievable;
+        private TextBox txt_Month;
+        private TextBox txt_Amount;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private ComboBox cb_Penalty;
     }
 }

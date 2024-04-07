@@ -27,10 +27,7 @@ namespace CRM
         }
 
         private void btn_AddAmtPen_Click(object sender, EventArgs e)
-        {
-            Amount_Recievable amount_Recievable = new Amount_Recievable();
-            amount_Recievable.Show();
-            Visible = true;
+        { 
 
         }
         private void btnAddConsumer_Click_1(object sender, EventArgs e)
@@ -112,6 +109,11 @@ namespace CRM
             Amount_Recievable amount_Recievable = new Amount_Recievable();
             amount_Recievable.Show();
             Visible = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
