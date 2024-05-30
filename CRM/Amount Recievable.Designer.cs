@@ -100,7 +100,7 @@
             // 
             // Save
             // 
-            Save.BackColor = Color.DarkSeaGreen;
+            Save.BackColor = Color.DarkTurquoise;
             Save.Location = new Point(139, 211);
             Save.Name = "Save";
             Save.Size = new Size(115, 37);
