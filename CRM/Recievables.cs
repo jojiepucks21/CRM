@@ -57,5 +57,9 @@ namespace CRM
 
         }
 
+        private void Lbl_RecAmount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
