@@ -27,7 +27,7 @@ namespace CRM
         }
 
         private void btn_AddAmtPen_Click(object sender, EventArgs e)
-        { 
+        {
 
         }
         private void btnAddConsumer_Click_1(object sender, EventArgs e)
@@ -49,7 +49,40 @@ namespace CRM
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            LoadDataIntoDataGridView(dGridView_Consumer);
+        }
 
+        public static void LoadDataIntoDataGridView(DataGridView dataGridView)
+        {
+            dataGridView.Rows.Clear();
+            string sql = "select * from tbl_consumer";
+            using (MySqlConnection connection = new MySqlConnection(Database.CONNECTION_STRING))
+            {
+                connection.Open();
+                using (MySqlCommand command = new MySqlCommand(sql, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            DataGridViewRow row = new DataGridViewRow();
+
+                            // Add cells to the row for each column in the fucking dataGridView
+                            for (int i = 0; i < dataGridView.Columns.Count; i++)
+                            {
+                                DataGridViewCell cell = new DataGridViewTextBoxCell();
+
+                                //if (i == 0) continue;
+                                cell.Value = reader[i];
+
+                                row.Cells.Add(cell);
+                            }
+
+                            dataGridView.Rows.Add(row);
+                        }
+                    }
+                }
+            }
         }
 
         private void dGridView_Consumer_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -115,5 +148,52 @@ namespace CRM
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Update button for consumer
+            if (dGridView_Consumer.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dGridView_Consumer.SelectedRows[0];
+                string[] values = new string[row.Cells.Count];
+                for (int i = 0; i < values.Length; i++)
+                {
+                    values[i] = row.Cells[i].Value.ToString();
+                }
+                Consumer consumer = new Consumer(values);
+                consumer.Show();
+            }
+        }
+        MySqlConnection conn;
+        MySqlCommand cmd;
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (dGridView_Consumer.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dGridView_Consumer.SelectedRows[0];
+                string id = row.Cells[0].Value.ToString();
+
+                conn = new MySqlConnection(Database.CONNECTION_STRING);
+                conn.Open();
+                cmd = new MySqlCommand("DELETE FROM `tbl_consumer` WHERE `consumerId` = @consumerId;", conn);
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@consumerId", id);
+
+                int enq = cmd.ExecuteNonQuery();
+                if (enq > 0)
+                {
+                    MessageBox.Show("Record Successfully Deleted", "CRM", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Record Deletion Failed!", "CRM", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+                conn.Close();
+
+            }
+            Dashboard.LoadDataIntoDataGridView(Dashboard.dGridView_Consumer);
+        }
+
     }
 }
