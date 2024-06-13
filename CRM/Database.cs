@@ -9,7 +9,7 @@ namespace CRM
 {
     internal class Database
     {
-        public static readonly string CONNECTION_STRING = "server=localhost;uid=root;pwd=comillas2012;database=crm;";
+        public static readonly string CONNECTION_STRING = "server=localhost;uid=root;pwd=Dinocrisis_1980;database=crm;";
 
     }
 }
